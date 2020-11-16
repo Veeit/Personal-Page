@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: veit.pro
+Token: 8e1199629b444ca98f20025215bf79c0357c5dc50ab63db8cff687b047ee98f3
