@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Blog: Veit Progl</title>
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+
+<body>
+	<header>
+		<h1>Veit Progl</h1>
+		<h2>the blog where I poste some random shit,<br /> but it is written with love!</h2>
+
+		<nav>
+			<a href="/">Homepage</a>
+			<a href="/blog/">Blog</a>
+		</nav>
+	</header>
+
+	<main>
+		<h5>Recently published</h5>
+	</main>
+
+	<footer>
+		<p>
+			<a href="" rel="noopener noreferrer"> Created by Veit Progl</a>
+		</p>
+		<p>
+			This page does not track any information, it does not use google analytics or any other analytics tool. None information gets collected!
+		</p>
+	</footer>
+
+	<script>
+		document.querySelector("a[href='/" + location.pathname.split("/")[1] + "/']").classList.add("current");
+
+		void async function() {
+			const articles = ['artikel1', 'artikel2'].reverse();
+			var i = 0;
+			for (const article of articles) {
+				var template = document.createElement('template');
+				
+				template.innerHTML = await (await fetch('./posts/'+article+'.html')).text();
+				
+				var articleContent = template.content.querySelector('article');				
+				var articleElement = document.importNode(articleContent, true);
+
+				document.getElementsByTagName("main")[0].appendChild(articleElement);
+				var headline = document.getElementsByTagName("article")[i].getElementsByTagName('h3')[0]
+				var fragment = document.createDocumentFragment();
+				var headlineLink = document.createElement('a');
+				headlineLink.appendChild(headline);	
+				headlineLink.href = "/blog/posts/" + article + ".html";
+				fragment.appendChild(headlineLink);
+				document.getElementsByTagName("article")[i].insertBefore(fragment, document.getElementsByTagName("article")[i].firstChild);
+				i++;
+			}
+		}()
+	</script>
+</body>

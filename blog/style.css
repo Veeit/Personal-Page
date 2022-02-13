@@ -1,0 +1,162 @@
+:root {
+  --mainColor: #02396e;
+}
+
+.noSpace {
+	padding: 0px !important;
+}
+
+.container {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 10vh 5vw;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+		Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+		sans-serif;
+	min-height: 100vh;
+	background-color: #222;
+	color: white;
+}
+
+a:hover {
+	color: var(--mainColor)
+}
+
+main {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+header {
+	background: var(--mainColor);
+	color: white;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+header h1 {
+	padding: 0px;
+	margin: 0px;
+	margin-top: 18px;
+}
+
+header h2 {
+	font-size: 1em;
+	text-align: center;
+}
+
+header nav {
+	background: white;
+	border-radius: 6px;
+	margin: 14px;
+	border: solid 1px white;
+}
+
+header nav a {
+	color: var(--mainColor);
+	text-decoration: none;
+	padding: 5px;
+	display: inline-block;
+	border-radius: 5px;
+
+}
+
+main h5 {
+	font-size: 1.3em;
+}
+
+main h6 {
+	font-size: 0.9em;
+	color: #8a8a8a;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 20px;
+}
+
+main h4 {
+	font-size: 1.1em;
+}
+
+header nav a.current {
+	background: lightblue;
+}
+
+header nav a:hover {
+	color: white;
+	background: var(--mainColor);
+}
+
+footer {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 20px;
+}
+
+footer>p:first-of-type {
+	margin-bottom: 0px;
+}
+
+footer img {
+	margin-left: 0.5rem;
+}
+
+footer a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white
+}
+
+article {
+	max-width: 750px;
+	width: 100%;
+	background: black;
+	padding: 30px;
+	border-radius: 15px;
+	line-height: 1.35em;
+	margin-bottom: 25px;
+	padding-top: 20px;
+	
+}
+
+article h3 {
+	padding: 0px;
+	margin: 0px;
+	font-size: 1.45em;
+	line-height: 1.5em;
+}
+
+article a {
+	color: white;
+	text-decoration: none;
+}
+
+article a:hover {
+	color: var(--mainColor)
+}
