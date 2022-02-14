@@ -39,6 +39,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	padding: 0 15px;
 }
 
 * {
@@ -136,13 +137,13 @@ footer a {
 article {
 	max-width: 750px;
 	width: 100%;
+	margin: 0 20px;
 	background: black;
 	padding: 30px;
 	border-radius: 15px;
 	line-height: 1.35em;
 	margin-bottom: 25px;
 	padding-top: 20px;
-	
 }
 
 article h3 {
