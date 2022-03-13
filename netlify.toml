@@ -1,5 +1,5 @@
 [build]
-publish = "VaporDocC.doccarchive/"
+publish = "Veit-Blog.doccarchive/"
 
 [[redirects]]
 from = "/documentation/*"
@@ -14,7 +14,7 @@ to = "/index.html"
 [[redirects]]
 from = "/data/documentation.json"
 status = 200
-to = "/data/documentation/vapordocc.json"
+to = "/data/documentation/Veit-Blog.json"
 
 [[redirects]]
 force = true
